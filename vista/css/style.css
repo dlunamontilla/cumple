@@ -275,13 +275,34 @@ pre, code {
   color: inherit;
 }
 
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .carousel img {
   margin: auto;
-  width: auto !important;
-  height: 100vh;
   --object-fit: cover;
   --object-position: center top;
+  -webkit-object-fit: var(--object-fit);
+  object-fit: var(--object-fit);
+  -webkit-object-position: var(--object-position);
+  object-position: var(--object-position);
   z-index: 1;
+}
+@media screen and (orientation: landscape) {
+  .carousel img {
+    width: auto !important;
+    height: 100vh;
+  }
+}
+@media screen and (orientation: portrait) {
+  .carousel img {
+    width: 100% !important;
+    height: auto;
+    max-height: 100vh;
+  }
 }
 
 .regalo {

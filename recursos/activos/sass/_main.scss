@@ -6,8 +6,10 @@
 .carousel {
     position: absolute;
     margin: auto;
-    left: 0; right: 0;
-    top: 0; bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 
     background-color: black;
 
@@ -21,7 +23,6 @@
     }
 
     &-item {
-
         active {
             position: relative;
             border: 1px solid white;
@@ -34,7 +35,7 @@
     }
 
     &-caption {
-        background-color: rgba( black, 0.6 );
+        background-color: rgba(black, 0.6);
         padding: 10px;
         border-top: 1px solid rgba(white, 0.1);
     }
@@ -42,6 +43,12 @@
 
 .slide {
     color: inherit;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .carousel img {
@@ -52,16 +59,25 @@
     // top: 0;
     // bottom: 0;
 
-    width: auto !important;
-    height: 100vh;
+    @media screen and (orientation: landscape) {
+        width: auto !important;
+        height: 100vh;
+    }
+
+    @media screen and (orientation: portrait) {
+        width: 100% !important;
+        height: auto;
+        max-height: 100vh;
+    }
+
     --object-fit: cover;
     --object-position: center top;
 
-    // -webkit-object-fit: var(--object-fit);
-    // object-fit: var(--object-fit);
+    -webkit-object-fit: var(--object-fit);
+    object-fit: var(--object-fit);
 
-    // -webkit-object-position: var(--object-position);
-    // object-position: var(--object-position);
+    -webkit-object-position: var(--object-position);
+    object-position: var(--object-position);
 
     z-index: 1;
 }
@@ -69,8 +85,10 @@
 .regalo {
     position: fixed;
     margin: auto;
-    left: 0; right: 0;
-    top: 0; bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     background-color: rgba(black, 0.95);
 
     display: flex;
@@ -81,21 +99,21 @@
 
     button {
         display: block;
-        background-color: rgba( black, 0.9 );
+        background-color: rgba(black, 0.9);
         color: white !important;
         border: 1px solid rgba(white, 0.2);
         outline: medium none;
         color: inherit;
         height: 100px;
         width: 400px;
-        max-width: calc(100% - 20px);   
+        max-width: calc(100% - 20px);
         font-size: 2rem;
         transition: 300ms ease;
         border-radius: 20px 0 20px 0;
         z-index: 100;
 
         &:hover {
-            background-color: rgba( darken(#0080d4, 20), 0.9);
+            background-color: rgba(darken(#0080d4, 20), 0.9);
         }
     }
 }
