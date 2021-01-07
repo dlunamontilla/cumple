@@ -237,4 +237,51 @@ pre, code {
   --color: white;
 }
 
+.multimedia {
+  background-color: black;
+  color: white;
+}
+
+.carousel {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: black;
+  height: 100vh;
+  color: inherit;
+}
+.carousel-item, .carousel-inner {
+  position: relative;
+  z-index: 1;
+}
+.carousel-item active {
+  position: relative;
+  border: 1px solid white;
+  z-index: 1;
+}
+.carousel-inner {
+  z-index: 1;
+}
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.slide {
+  color: inherit;
+}
+
+.carousel img {
+  margin: auto;
+  width: auto !important;
+  height: 100vh;
+  --object-fit: cover;
+  --object-position: center top;
+  z-index: 1;
+}
+
 /*# sourceMappingURL=style.css.map */
