@@ -284,4 +284,49 @@ pre, code {
   z-index: 1;
 }
 
+.regalo {
+  position: fixed;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.regalo button {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  outline: medium none;
+  color: inherit;
+  height: 100px;
+  width: 400px;
+  max-width: calc(100% - 20px);
+  font-size: 2rem;
+  transition: 300ms ease;
+  border-radius: 20px 0 20px 0;
+  z-index: 100;
+}
+.regalo button:hover {
+  background-color: rgba(0, 66, 110, 0.9);
+}
+
+@keyframes fadeOut {
+  from {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+.fadeOut {
+  animation: 800ms ease fadeOut 1;
+  animation-delay: 300ms;
+}
+
 /*# sourceMappingURL=style.css.map */

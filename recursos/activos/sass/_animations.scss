@@ -1,0 +1,14 @@
+@keyframes fadeOut {
+    from {
+        background-color: rgba(black, 0.9);
+    }
+
+    to {
+        background-color: rgba( black, 0.1);
+    }
+}
+
+.fadeOut {
+    animation: 800ms ease fadeOut 1;
+    animation-delay: 300ms;
+}
